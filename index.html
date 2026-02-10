@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة رنا أكاديمي | خبرة 20 عاماً في التميز التعليمي</title>
+    
+    <!-- الخطوط العربية الاحترافية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- مكتبات التصميم -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --merlot: #730C20;
+            --gold: #D4AF37;
+            --champagne: #FFF1DC;
+            --dark: #191919;
+        }
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .font-title {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .text-merlot { color: var(--merlot); }
+        .bg-merlot { background-color: var(--merlot); }
+        .border-merlot { border-color: var(--merlot); }
+        
+        .hero-gradient {
+            background: linear-gradient(180deg, var(--champagne) 0%, #ffffff 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(115, 12, 32, 0.15);
+        }
+
+        /* تصميم الشعار الاحترافي (الختم الأكاديمي) */
+        .logo-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+        }
+        .logo-base {
+            background: radial-gradient(circle at top left, #8e1128, #4a0815);
+            border: 1.5px solid rgba(212, 175, 55, 0.4);
+            border-radius: 14px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .logo-cap {
+            position: absolute;
+            top: -10px;
+            left: -5px;
+            color: var(--gold);
+            transform: rotate(-15deg);
+            z-index: 30;
+        }
+        .logo-text {
+            font-family: 'Amiri', serif;
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: #ffffff;
+            z-index: 10;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .guarantee-badge {
+            background: linear-gradient(135deg, #ffffff 0%, var(--champagne) 100%);
+            border-right: 5px solid var(--merlot);
+            box-shadow: 0 10px 30px rgba(115, 12, 32, 0.1);
+        }
+
+        /* تحسينات القوائم */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--merlot);
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 py-3">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-4 group">
+                <div class="logo-wrapper">
+                    <div class="logo-base absolute inset-0"></div>
+                    <i data-lucide="graduation-cap" class="logo-cap w-7 h-7"></i>
+                    <span class="logo-text">R</span>
+                </div>
+                <div class="flex flex-col border-r-2 border-gray-100 pr-4">
+                    <h1 class="text-xl font-black text-gray-900 leading-none">رنا أكاديمي</h1>
+                    <span class="text-[8px] tracking-[0.3em] text-[#D4AF37] font-bold uppercase mt-1">Rana Academy</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-bold text-gray-600">
+                <a href="#services" class="nav-link hover:text-merlot">خدماتنا</a>
+                <a href="#offers" class="nav-link hover:text-merlot">عروضنا</a>
+                <a href="#benefits" class="nav-link hover:text-merlot">لماذا نحن؟</a>
+            </nav>
+
+            <a href="https://wa.me/905389536515" target="_blank" class="bg-merlot text-white px-6 py-2.5 rounded-xl font-bold hover:opacity-90 transition-all transform hover:scale-105 shadow-lg text-sm">
+                احجز الآن
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-44 md:pb-28 hero-gradient relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-3/5 text-center lg:text-right">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-merlot text-xs font-black mb-6 shadow-md border border-red-50">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        <span>التعليم الرقمي الأكثر متعة في الخليج العربي</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+                        اجعل طفلك <span class="text-merlot">يعشق</span> <br> اللغة العربية والقرآن
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl lg:ml-auto leading-relaxed font-medium">
+                        خبرة 20 عاماً في التدريس التربوي الموجه لمناهج السعودية، الإمارات، وقطر. نستخدم أحدث أساليب التفاعل لجعل الحصة رحلة من السعادة.
+                    </p>
+
+                    <!-- Refund Guarantee Badge -->
+                    <div class="guarantee-badge inline-flex items-center gap-4 px-6 py-5 rounded-3xl mb-10 text-right">
+                        <div class="w-14 h-14 bg-merlot rounded-2xl flex items-center justify-center text-white shrink-0 shadow-lg">
+                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <p class="font-black text-merlot text-xl leading-tight">ضمان استرداد الأموال</p>
+                            <p class="text-sm text-gray-600 font-bold mt-1">يتم استعادة مبلغ الدرس الأول كاملاً إن لم تكن راضياً عن الحصة</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+                        <a href="https://wa.me/905389536515" target="_blank" class="flex items-center justify-center gap-3 bg-merlot text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-red-900 transition-all transform hover:scale-105 shadow-2xl">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            ابدأ حصة تقييمية مجانية
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-2/5 relative">
+                    <div class="relative animate-float">
+                        <div class="absolute -top-6 -left-6 z-20 bg-white p-5 rounded-2xl shadow-2xl border-2 border-gold text-center">
+                            <p class="text-3xl font-black text-merlot leading-none">20+</p>
+                            <p class="text-[10px] font-bold text-gray-800 uppercase">عاماً من الخبرة</p>
+                        </div>
+                        <div class="rounded-[3rem] overflow-hidden border-[12px] border-white shadow-2xl">
+                            <!-- Image: Happy students studying online -->
+                            <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=1200&q=80" 
+                                 class="w-full h-auto object-cover min-h-[450px]" alt="طلاب سعداء يدرسون أونلاين">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 z-20 bg-merlot text-white p-4 rounded-2xl shadow-xl flex items-center gap-3">
+                            <i data-lucide="heart" class="w-6 h-6 text-gold fill-gold"></i>
+                            <span class="text-sm font-black italic">نحن نزرع القيم قبل العلم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exclusive Offers Section -->
+    <section id="offers" class="py-24 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-merlot mb-4">عروض رنا أكاديمي الحصرية</h2>
+                <div class="w-24 h-1.5 bg-gold mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <!-- Offer Card 1 -->
+                <div class="relative group bg-merlot rounded-[3rem] p-10 text-white overflow-hidden shadow-2xl transform hover:scale-[1.03] transition-all">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-10 -mt-10"></div>
+                    <div class="relative z-10">
+                        <span class="bg-gold text-black text-[10px] font-black px-3 py-1 rounded-full mb-6 inline-block uppercase tracking-widest">عرض المبتدئين</span>
+                        <h3 class="text-4xl font-black mb-4 leading-tight">خصم 50% <br>على الحصة الأولى</h3>
+                        <p class="text-white/70 font-bold mb-8">فرصتك لاكتشاف أسلوبنا التعليمي الممتع بنصف السعر ومع ضمان استرداد كامل.</p>
+                        <a href="https://wa.me/905389536515" class="inline-flex items-center gap-3 bg-white text-merlot px-8 py-4 rounded-xl font-black text-lg hover:bg-champagne transition-all shadow-lg">
+                            احصل على الخصم
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Offer Card 2 -->
+                <div class="relative group bg-champagne border-4 border-merlot rounded-[3rem] p-10 text-merlot overflow-hidden shadow-2xl transform hover:scale-[1.03] transition-all">
+                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-merlot/5 rounded-full -ml-10 -mb-10"></div>
+                    <div class="relative z-10">
+                        <span class="bg-merlot text-white text-[10px] font-black px-3 py-1 rounded-full mb-6 inline-block uppercase tracking-widest">باقات التميز</span>
+                        <h3 class="text-4xl font-black mb-4 leading-tight">خصم 40% <br>على الباقات الشهرية</h3>
+                        <p class="text-merlot/70 font-bold mb-8">استمرارية ابنك في التعلم تعني توفيراً أكبر. احجز مقعدك في باقاتنا المخفضة الآن.</p>
+                        <a href="https://wa.me/905389536515" class="inline-flex items-center gap-3 bg-merlot text-white px-8 py-4 rounded-xl font-black text-lg hover:opacity-90 transition-all shadow-lg">
+                            استفسر عن الباقات
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black text-gray-900 mb-4">برامجنا التعليمية</h2>
+                <p class="text-gray-500 font-bold max-w-xl mx-auto italic">نحن متخصصون في تحويل الصعوبات الدراسية إلى قصص نجاح</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-10 rounded-[2.5rem] card-hover border border-gray-100 transition-all text-right group">
+                    <div class="w-14 h-14 bg-merlot/10 text-merlot rounded-2xl flex items-center justify-center mb-8 group-hover:bg-merlot group-hover:text-white transition-all">
+                        <i data-lucide="book-open" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-4">تأسيس لغة عربية</h3>
+                    <p class="text-gray-500 text-sm font-bold leading-relaxed">تعليم القراءة والكتابة بأسلوب القاعدة النورانية المطور للأطفال.</p>
+                </div>
+                <div class="bg-white p-10 rounded-[2.5rem] card-hover border border-gray-100 transition-all text-right group">
+                    <div class="w-14 h-14 bg-merlot/10 text-merlot rounded-2xl flex items-center justify-center mb-8 group-hover:bg-merlot group-hover:text-white transition-all">
+                        <i data-lucide="library" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-4">المناهج المدرسية</h3>
+                    <p class="text-gray-500 text-sm font-bold leading-relaxed">متابعة شاملة لمناهج الوزارة في السعودية والإمارات وقطر للمرحلة الابتدائية والمتوسطة.</p>
+                </div>
+                <div class="bg-white p-10 rounded-[2.5rem] card-hover border border-gray-100 transition-all text-right group">
+                    <div class="w-14 h-14 bg-merlot/10 text-merlot rounded-2xl flex items-center justify-center mb-8 group-hover:bg-merlot group-hover:text-white transition-all">
+                        <i data-lucide="mic" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-4">تحفيظ القرآن الكريم</h3>
+                    <p class="text-gray-500 text-sm font-bold leading-relaxed">تحفيظ وتجويد برواية حفص بأسلوب تربوي يغرس محبة القرآن في قلب الطفل.</p>
+                </div>
+                <div class="bg-white p-10 rounded-[2.5rem] card-hover border border-gray-100 transition-all text-right group">
+                    <div class="w-14 h-14 bg-merlot/10 text-merlot rounded-2xl flex items-center justify-center mb-8 group-hover:bg-merlot group-hover:text-white transition-all">
+                        <i data-lucide="pen-tool" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-black mb-4">علاج ضعف الإملاء</h3>
+                    <p class="text-gray-500 text-sm font-bold leading-relaxed">خطة علاجية مكثفة لتحسين مهارات الخط والإملاء والطلاقة القرائية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section (Periodic Reports for Parents) -->
+    <section id="benefits" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="bg-[#191919] p-10 md:p-20 rounded-[4rem] relative overflow-hidden flex flex-col lg:flex-row gap-16 items-center shadow-2xl">
+                <div class="absolute inset-0 bg-merlot/5 mix-blend-overlay"></div>
+                <div class="w-full lg:w-1/2 text-right relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-black text-champagne mb-12">أنتِ شريكة معنا <br> <span class="text-merlot">في كل خطوة</span></h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 rounded-xl bg-merlot flex items-center justify-center shrink-0">
+                                <i data-lucide="clipboard-list" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-black text-white mb-2">تقارير دورية مفصلة للأهل</h4>
+                                <p class="text-gray-400 font-bold leading-relaxed">نرسل لكِ تقريراً أسبوعياً يوضح تطور مستوى طفلك، ما تم إنجازه، وخطة العمل القادمة لتكوني دائماً في قلب الحدث.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 rounded-xl bg-gold flex items-center justify-center shrink-0">
+                                <i data-lucide="award" class="w-6 h-6 text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-black text-white mb-2">خبرة تربوية عميقة</h4>
+                                <p class="text-gray-400 font-bold leading-relaxed">20 عاماً في التدريس أتاحت لنا فهم نفسية الطلاب وكيفية تحفيزهم بذكاء.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/905389536515" class="mt-12 inline-block bg-white text-merlot px-10 py-4 rounded-xl font-black text-xl hover:bg-champagne transition-all shadow-xl">
+                        ابدأ الرحلة الآن
+                    </a>
+                </div>
+                <div class="w-full lg:w-1/2 relative z-10">
+                    <div class="bg-gradient-to-br from-merlot to-red-900 p-10 rounded-[3rem] text-center border border-white/10">
+                        <i data-lucide="smile" class="w-20 h-20 text-gold mx-auto mb-6"></i>
+                        <h3 class="text-2xl font-black text-champagne mb-4">سعادة طفلك أولاً</h3>
+                        <p class="text-lg font-bold text-white/80 leading-relaxed italic">"في رنا أكاديمي، لا نحشو الأدمغة بالمعلومات، بل نبني علاقة حب بين الطفل وكتابه.. هذا هو سر تفوقنا."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-[#191919] text-champagne border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col items-center gap-6 mb-10">
+                <div class="logo-wrapper">
+                    <div class="logo-base absolute inset-0 border-white/20"></div>
+                    <i data-lucide="graduation-cap" class="logo-cap w-7 h-7"></i>
+                    <span class="logo-text">R</span>
+                </div>
+                <h2 class="text-2xl font-black">رنا أكاديمي التعليمية</h2>
+                <p class="text-gray-500 font-bold max-w-md">التعليم بمسؤولية.. والتربية بحب. خبرة تزيد عن 20 عاماً في بناء الأجيال.</p>
+            </div>
+            <p class="text-[10px] text-gray-600 font-bold">جميع الحقوق محفوظة © <span id="year"></span> منصة رنا أكاديمي</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/905389536515" target="_blank" class="fixed bottom-8 left-8 z-50 bg-[#25D366] text-white p-4 rounded-2xl shadow-2xl hover:scale-110 transition-transform">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <script>
+        // تفعيل الأيقونات
+        lucide.createIcons();
+        
+        // تحديث السنة
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
